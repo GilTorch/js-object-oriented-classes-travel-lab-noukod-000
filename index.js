@@ -34,9 +34,9 @@ class Route{
     return avenueDistance+streetDistance;
   }
 
-  estimatedTime(){
+  estimatedTime(peakHours){
     // off Peak hours : 3 block/minute
     // peak hours : 2 block/minute
-    return this.blocksTravelled()/3 || this.blocksTravelled()/2;
+    return peakHours ? this.blocksTravelled()/3 : this.blocksTravelled()/2;
   }
 }
