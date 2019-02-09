@@ -16,7 +16,7 @@ class Route{
     this.startingBlock=startingBlock;
     this.endingBlock=endingBlock;
   }
-
+  
   blocksTravelled(){
     let eastWest = [
     '1st Avenue',
@@ -32,5 +32,11 @@ class Route{
     let streetDistance=Math.abs(this.startingBlock.vertical-this.endingBlock.vertical)
 
     return avenueDistance+streetDistance;
+  }
+
+  estimatedTime(){
+    // off Peak hours : 3 block/minute 
+    // peak hours : 2 block/minute  
+    return blocksTravelled()/3
   }
 }
