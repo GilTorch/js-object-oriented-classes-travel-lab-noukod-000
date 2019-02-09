@@ -37,6 +37,6 @@ class Route{
   estimatedTime(){
     // off Peak hours : 3 block/minute
     // peak hours : 2 block/minute
-    return blocksTravelled()/3
+    return this.blocksTravelled()/3
   }
 }
