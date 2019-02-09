@@ -16,7 +16,7 @@ class Route{
     this.startingBlock=startingBlock;
     this.endingBlock=endingBlock;
   }
-  
+
   blocksTravelled(){
     let eastWest = [
     '1st Avenue',
