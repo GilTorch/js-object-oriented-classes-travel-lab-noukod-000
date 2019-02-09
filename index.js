@@ -11,7 +11,26 @@ class Driver{
 
 
 class Route{
-  blocksTravelled(){
 
+  constructor(startingBlock,endingBlock){
+    this.startingBlock=startingBlock;
+    this.endingBlock=endingBlock;
+  }
+  
+  blocksTravelled(){
+    let eastWest = [
+    '1st Avenue',
+    '2nd Avenue',
+    '3rd Avenue',
+    'Lexington Avenue',
+    'Park',
+    'Madison Avenue',
+    '5th Avenue'
+    ];
+
+    let avenueDistance=Math.abs(eastWest.indexOf(this.startingBlock.horizontal)-eastWest.indexOf(this.endingBlock.horizontal))
+    let streetDistance=Math.abs(this.startingBlock.vertical-this.endingBlock.vertical)
+
+    return avenueDistance+streetDistance;
   }
 }
