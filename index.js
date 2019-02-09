@@ -16,7 +16,7 @@ class Route{
     this.startingBlock=startingBlock;
     this.endingBlock=endingBlock;
   }
-  
+
   blocksTravelled(){
     let eastWest = [
     '1st Avenue',
@@ -35,8 +35,8 @@ class Route{
   }
 
   estimatedTime(){
-    // off Peak hours : 3 block/minute 
-    // peak hours : 2 block/minute  
+    // off Peak hours : 3 block/minute
+    // peak hours : 2 block/minute
     return blocksTravelled()/3
   }
 }
